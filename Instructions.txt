@@ -1,0 +1,29 @@
+## Create virtual environment
+
+python -m venv parkenv
+
+##Run following command to activate the environment
+
+./parkenv/Scripts/activate
+
+## Now install packages listed in requirements file (in project directory) using pip
+
+pip install -r  requirements.txt
+
+## Once all packages are successfully installed, make sure the model file is present along with other scripts.
+
+#How to run preprocess images 
+
+python preprocess_images.py
+
+#How to run training scripts (Run this only if you have new set of images) Runs fasted when GPU is used.
+
+streamlit run parkinsons_cnn_training.py
+
+#How to run detection script
+
+streamlit run DectectParkinsons.py
+
+
+./parkenv/Scripts/deactivate
+
